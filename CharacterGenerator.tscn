@@ -1,166 +1,130 @@
-[gd_scene load_steps=2 format=2]
+[gd_scene load_steps=2 format=3 uid="uid://c0fx6a1btkg3o"]
 
-[ext_resource path="res://CharacterGenerator.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://CharacterGenerator.gd" id="1"]
 
 [node name="CharacterGenerator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 offset_top = 1.0
 offset_bottom = 1.0
-script = ExtResource( 1 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1")
 
 [node name="BackToMenuButton" type="Button" parent="."]
-anchor_top = 1.0
-anchor_bottom = 1.0
-offset_top = -20.0
-offset_right = 204.0
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.9
+anchor_right = 0.004
+anchor_bottom = 0.9
+offset_left = 0.392
+offset_top = -0.200012
+offset_right = 204.392
+offset_bottom = 30.8
+grow_vertical = 0
 text = "Back to menu"
 
 [node name="GenerateStatsContainer" type="VBoxContainer" parent="."]
+layout_mode = 0
 offset_right = 203.0
 offset_bottom = 577.0
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="GenerateStatsButton" type="Button" parent="GenerateStatsContainer"]
-offset_right = 203.0
-offset_bottom = 20.0
+layout_mode = 2
 text = "Generate stats"
 
 [node name="StrContainer" type="HBoxContainer" parent="GenerateStatsContainer"]
-offset_top = 24.0
-offset_right = 203.0
-offset_bottom = 38.0
+layout_mode = 2
 
 [node name="StrLabel" type="Label" parent="GenerateStatsContainer/StrContainer"]
-offset_right = 22.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "STR"
 
 [node name="StrNumberLabel" type="Label" parent="GenerateStatsContainer/StrContainer"]
-offset_left = 26.0
-offset_right = 42.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "10"
 
 [node name="StrValueLabel" type="Label" parent="GenerateStatsContainer/StrContainer"]
-offset_left = 46.0
-offset_right = 54.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "0"
 
 [node name="DexContainer" type="HBoxContainer" parent="GenerateStatsContainer"]
-offset_top = 42.0
-offset_right = 203.0
-offset_bottom = 56.0
+layout_mode = 2
 
 [node name="DexLabel" type="Label" parent="GenerateStatsContainer/DexContainer"]
-offset_right = 25.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "DEX"
 
 [node name="DexNumberLabel" type="Label" parent="GenerateStatsContainer/DexContainer"]
-offset_left = 29.0
-offset_right = 45.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "10"
 
 [node name="DexValueLabel" type="Label" parent="GenerateStatsContainer/DexContainer"]
-offset_left = 49.0
-offset_right = 57.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "0"
 
 [node name="ConContainer" type="HBoxContainer" parent="GenerateStatsContainer"]
-offset_top = 60.0
-offset_right = 203.0
-offset_bottom = 74.0
+layout_mode = 2
 
 [node name="ConLabel" type="Label" parent="GenerateStatsContainer/ConContainer"]
-offset_right = 29.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "CON"
 
 [node name="ConNumberLabel" type="Label" parent="GenerateStatsContainer/ConContainer"]
-offset_left = 33.0
-offset_right = 49.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "10"
 
 [node name="ConValueLabel" type="Label" parent="GenerateStatsContainer/ConContainer"]
-offset_left = 53.0
-offset_right = 61.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "0"
 
 [node name="IntContainer" type="HBoxContainer" parent="GenerateStatsContainer"]
-offset_top = 78.0
-offset_right = 203.0
-offset_bottom = 92.0
+layout_mode = 2
 
 [node name="IntLabel" type="Label" parent="GenerateStatsContainer/IntContainer"]
-offset_right = 22.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "INT"
 
 [node name="IntNumberLabel" type="Label" parent="GenerateStatsContainer/IntContainer"]
-offset_left = 26.0
-offset_right = 42.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "10"
 
 [node name="IntValueLabel" type="Label" parent="GenerateStatsContainer/IntContainer"]
-offset_left = 46.0
-offset_right = 54.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "0"
 
 [node name="WisContainer" type="HBoxContainer" parent="GenerateStatsContainer"]
-offset_top = 96.0
-offset_right = 203.0
-offset_bottom = 110.0
+layout_mode = 2
 
 [node name="WisLabel" type="Label" parent="GenerateStatsContainer/WisContainer"]
-offset_right = 25.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "WIS"
 
 [node name="WisNumberLabel" type="Label" parent="GenerateStatsContainer/WisContainer"]
-offset_left = 29.0
-offset_right = 45.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "10"
 
 [node name="WisValueLabel" type="Label" parent="GenerateStatsContainer/WisContainer"]
-offset_left = 49.0
-offset_right = 57.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "0"
 
 [node name="ChaContainer" type="HBoxContainer" parent="GenerateStatsContainer"]
-offset_top = 114.0
-offset_right = 203.0
-offset_bottom = 128.0
+layout_mode = 2
 
 [node name="ChaLabel" type="Label" parent="GenerateStatsContainer/ChaContainer"]
-offset_right = 27.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "CHA"
 
 [node name="ChaNumberLabel" type="Label" parent="GenerateStatsContainer/ChaContainer"]
-offset_left = 31.0
-offset_right = 47.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "10"
 
 [node name="ChaValueLabel" type="Label" parent="GenerateStatsContainer/ChaContainer"]
-offset_left = 51.0
-offset_right = 59.0
-offset_bottom = 14.0
+layout_mode = 2
 text = "0"
+
 [connection signal="pressed" from="BackToMenuButton" to="." method="_on_BackToMenuButton_pressed"]
 [connection signal="pressed" from="GenerateStatsContainer/GenerateStatsButton" to="." method="_on_GenerateStatsButton_pressed"]

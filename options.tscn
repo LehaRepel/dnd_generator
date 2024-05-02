@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=3 uid="uid://hknvpt6m5a1o"]
+
+[ext_resource type="Script" path="res://options.gd" id="1_78bx6"]
+
+[node name="Options" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_78bx6")
+
+[node name="OptionsContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -328.0
+offset_right = 330.0
+offset_bottom = 66.0
+grow_horizontal = 2
+
+[node name="ClassGeneratorButton" type="Button" parent="OptionsContainer"]
+layout_mode = 2
+text = "Generate Class"
+
+[node name="RaceGeneratorButton" type="Button" parent="OptionsContainer"]
+layout_mode = 2
+text = "Generate Race"
+
+[node name="BackToMenuButton" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.004
+anchor_top = 0.9
+anchor_right = 0.004
+anchor_bottom = 0.9
+offset_left = 0.392
+offset_top = -0.200012
+offset_right = 204.392
+offset_bottom = 30.8
+grow_vertical = 0
+text = "Back to menu"
+
+[connection signal="pressed" from="OptionsContainer/RaceGeneratorButton" to="." method="_on_race_generator_button_pressed"]
+[connection signal="pressed" from="BackToMenuButton" to="." method="_on_back_to_menu_button_pressed"]

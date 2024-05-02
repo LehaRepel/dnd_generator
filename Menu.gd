@@ -23,3 +23,7 @@ func _on_StartButton_pressed():
 
 func _on_ExitButton_pressed():
 	get_tree().quit()
+
+
+func _on_options_button_pressed():
+	get_tree().change_scene_to_file("res://options.tscn")
