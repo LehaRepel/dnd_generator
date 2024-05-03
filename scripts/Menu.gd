@@ -17,7 +17,7 @@ func _ready():
 
 
 func _on_StartButton_pressed():
-	get_tree().change_scene_to_file("res://CharacterGenerator.tscn")
+	get_tree().change_scene_to_file("res://scenes/CharacterGenerator.tscn")
 	
 
 
@@ -26,4 +26,4 @@ func _on_ExitButton_pressed():
 
 
 func _on_options_button_pressed():
-	get_tree().change_scene_to_file("res://options.tscn")
+	get_tree().change_scene_to_file("res://scenes/options.tscn")

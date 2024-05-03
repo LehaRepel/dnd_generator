@@ -1,0 +1,18 @@
+{
+  "race_name": "human",
+  "characteristics_bonus":{
+	"str": 2,
+	"cha": 1
+  },
+  "age": {
+	"start": 1,
+	"finish": 123
+  },
+  "size": "small",
+  "speed": 35,
+  "languages": "common, orc",
+  "proficiencies": "acrobatics",
+  "vision": "dark vision",
+  "resistances": "poison",
+  "save_throws": "charm"
+}

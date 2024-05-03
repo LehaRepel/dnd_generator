@@ -1,6 +1,6 @@
 [gd_scene load_steps=2 format=3 uid="uid://c0fx6a1btkg3o"]
 
-[ext_resource type="Script" path="res://CharacterGenerator.gd" id="1"]
+[ext_resource type="Script" path="res://scripts/CharacterGenerator.gd" id="1"]
 
 [node name="CharacterGenerator" type="Control"]
 layout_mode = 3

@@ -1,0 +1,596 @@
+[gd_scene load_steps=2 format=3 uid="uid://bilt5p2js4mb0"]
+
+[ext_resource type="Script" path="res://scripts/race_generator.gd" id="1_02gtp"]
+
+[node name="RaceGenerator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 1.0
+offset_top = -1.0
+offset_right = 1.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 3
+size_flags_vertical = 3
+script = ExtResource("1_02gtp")
+
+[node name="MainContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HeadContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="MainContainer/HeadContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Назад"
+
+[node name="Label" type="Label" parent="MainContainer/HeadContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 1
+text = "Создание расы"
+horizontal_alignment = 1
+
+[node name="GenerateButton" type="Button" parent="MainContainer/HeadContainer"]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 2
+text = "Создать"
+
+[node name="ContentContainer" type="HBoxContainer" parent="MainContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="MainContentContainer" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="RaceNameContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="RaceNameLabel" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/RaceNameContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Название расы"
+
+[node name="RaceNameLineEdit" type="LineEdit" parent="MainContainer/ContentContainer/MainContentContainer/RaceNameContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="CharacteristicsLabel" type="Label" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 0
+text = "Характеристики"
+horizontal_alignment = 1
+
+[node name="CharacteristicsHeadLabel" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 4
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsHeadLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Название"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsHeadLabel"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Бонус"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="CharacteristicsContainer" type="VBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="StrContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/StrContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Сила"
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/StrContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+"
+
+[node name="SpinBox" type="SpinBox" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/StrContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 9.0
+
+[node name="DexContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/DexContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ловкость"
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/DexContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+"
+
+[node name="SpinBox" type="SpinBox" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/DexContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 9.0
+
+[node name="ConContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/ConContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Телосложение"
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/ConContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+"
+
+[node name="SpinBox" type="SpinBox" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/ConContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 9.0
+
+[node name="IntContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/IntContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Интеллект"
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/IntContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+"
+
+[node name="SpinBox" type="SpinBox" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/IntContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 9.0
+
+[node name="WisContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/WisContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Мудрость"
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/WisContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+"
+
+[node name="SpinBox" type="SpinBox" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/WisContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 9.0
+
+[node name="ChaContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/ChaContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Харизма"
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/ChaContainer"]
+layout_mode = 2
+size_flags_horizontal = 10
+text = "+"
+
+[node name="SpinBox" type="SpinBox" parent="MainContainer/ContentContainer/MainContentContainer/CharacteristicsContainer/ChaContainer"]
+layout_mode = 2
+size_flags_horizontal = 2
+max_value = 9.0
+
+[node name="HBoxContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+tooltip_text = "Скорость в футах (5футов = 1 клетка)"
+mouse_filter = 0
+text = "Скорость"
+
+[node name="LineEdit" type="LineEdit" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="SizeContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/SizeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Размер"
+
+[node name="SizeOptionButton" type="OptionButton" parent="MainContainer/ContentContainer/MainContentContainer/SizeContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Возраст
+"
+
+[node name="LineEdit" type="LineEdit" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="LineEdit2" type="LineEdit" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="VisionContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/VisionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Зрение"
+
+[node name="VisionOptionButton" type="OptionButton" parent="MainContainer/ContentContainer/MainContentContainer/VisionContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SkillProficiencyContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/SkillProficiencyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Владение навыками"
+
+[node name="SkillProficiencyOptionButton" type="OptionButton" parent="MainContainer/ContentContainer/MainContentContainer/SkillProficiencyContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="SaveThrowsContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/SaveThrowsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Спас броски эффектов"
+
+[node name="SaveThrowsOptionButton" type="OptionButton" parent="MainContainer/ContentContainer/MainContentContainer/SaveThrowsContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MainContainer/ContentContainer/MainContentContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Языки"
+
+[node name="LineEdit" type="LineEdit" parent="MainContainer/ContentContainer/MainContentContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="MainResistansContainer" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer"]
+layout_mode = 2
+text = "Сопротивляемости
+"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ResistansContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="ResistansBoxContainer" type="VBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HeaderContainer" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HeaderContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Название"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label2" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HeaderContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Сопротивление"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Label3" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HeaderContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Иммунитет"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Колющий"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+icon_alignment = 1
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer2"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Рубящий"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer3"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Дробящий"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer4"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer5" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Кислотный"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer5"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer6" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Холодный"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer6"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer7" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Огненный"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer7"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer8" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer8"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Силовый"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer8"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer8"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer9" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer9"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Молнией"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer9"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer9"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer10" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer10"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Некротик"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer10"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer10"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer11" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer11"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Ядовитый"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer11"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer11"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer12" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer12"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Психический"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer12"]
+layout_mode = 2
+size_flags_horizontal = 6
+icon_alignment = 1
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer12"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer13" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer13"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Сиянием"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer13"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer13"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="HBoxContainer14" type="HBoxContainer" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer14"]
+layout_mode = 2
+size_flags_horizontal = 3
+text = "Громовой
+"
+
+[node name="CheckBox" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer14"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="CheckBox2" type="CheckBox" parent="MainContainer/ContentContainer/MainResistansContainer/ResistansContainer/ResistansBoxContainer/HBoxContainer14"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="VBoxContainer" type="VBoxContainer" parent="MainContainer/ContentContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Label" type="Label" parent="MainContainer/ContentContainer/VBoxContainer"]
+layout_mode = 2
+text = "Описание расы"
+
+[node name="TextEdit" type="TextEdit" parent="MainContainer/ContentContainer/VBoxContainer"]
+layout_mode = 2
+size_flags_vertical = 3
+wrap_mode = 1
+autowrap_mode = 1
+
+[connection signal="pressed" from="MainContainer/HeadContainer/BackButton" to="." method="_on_back_button_pressed"]
+[connection signal="pressed" from="MainContainer/HeadContainer/GenerateButton" to="." method="_on_generate_button_pressed"]
+[connection signal="item_selected" from="MainContainer/ContentContainer/MainContentContainer/SizeContainer/SizeOptionButton" to="." method="_on_size_option_button_item_selected"]
+[connection signal="item_selected" from="MainContainer/ContentContainer/MainContentContainer/VisionContainer/VisionOptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="MainContainer/ContentContainer/MainContentContainer/SkillProficiencyContainer/SkillProficiencyOptionButton" to="." method="_on_option_button_item_selected"]
+[connection signal="item_selected" from="MainContainer/ContentContainer/MainContentContainer/SaveThrowsContainer/SaveThrowsOptionButton" to="." method="_on_option_button_item_selected"]

@@ -60,7 +60,7 @@ func set_value(number):
 
 
 func _on_BackToMenuButton_pressed():
-	get_tree().change_scene_to_file("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 
 func _on_GenerateStatsButton_pressed():

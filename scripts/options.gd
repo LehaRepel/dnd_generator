@@ -13,8 +13,8 @@ func _process(delta):
 
 
 func _on_back_to_menu_button_pressed():
-	get_tree().change_scene_to_file("res://Menu.tscn")
+	get_tree().change_scene_to_file("res://scenes/Menu.tscn")
 
 
 func _on_race_generator_button_pressed():
-		get_tree().change_scene_to_file("res://race_generator.tscn")
+		get_tree().change_scene_to_file("res://scenes/race_generator.tscn")
