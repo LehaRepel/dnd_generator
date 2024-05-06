@@ -2,14 +2,21 @@
 
 [ext_resource type="Texture2D" uid="uid://bns1q8q3lg2q7" path="res://scenes/battle_map.jpeg" id="1_6ax26"]
 
-[node name="Control" type="Control"]
+[node name="BattleMap" type="Control"]
 layout_mode = 3
 anchors_preset = 0
 offset_right = 2048.0
 offset_bottom = 1024.0
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="BackgroundTextureRect" type="TextureRect" parent="."]
 layout_mode = 0
 offset_right = 2048.0
 offset_bottom = 1024.0
 texture = ExtResource("1_6ax26")
+
+[node name="Enemy" type="TextureRect" parent="."]
+layout_mode = 0
+offset_left = 1075.0
+offset_top = 419.0
+offset_right = 1269.0
+offset_bottom = 592.0
